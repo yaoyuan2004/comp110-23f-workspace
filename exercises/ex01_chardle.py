@@ -4,8 +4,9 @@ x: str = input("Enter a 5-character word:")
 if len(x) != 5:
     exit("Word must contain 5 characters")
 y: str = input("Enter a single character:")
+if len(y) != 1:
+    exit("Character must be a single character")
 print("Searching for", y ,"in" ,x)
-
 index: int = 0
 times: int = 0
 for letter in x:
