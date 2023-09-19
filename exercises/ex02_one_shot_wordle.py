@@ -5,18 +5,18 @@ x: str = input("What is your 6-letter guess?")
 while len(x) != 6:
     x: str = input("That was not 6 letters! Try again:")
 if x != y:
-    index: int = -1
+    index: int = 0
     output = ("")
-    while index < 4:
-        index = index + 1
+    while index <= 5:
         if x[index] == y[index]:
             output = output + f"\U0001F7E9"
-        elif x[index] in {"p","y","t","h","o","n"}:
+        elif x[index] in {"p", "y", "t", "h", "o", "n"}:
             output = output + f"\U0001F7E8"
         else:
             output = output + f"\U00002B1C"
-    print (str(output))
-    print ("Not quite. Play again soon!")
+        index = index + 1
+    print(str(output))
+    print("Not quite. Play again soon!")
 else:
-    print (f"\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9")
-    print ("Woo! You got it!")
+    print(f"\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9")
+    print("Woo! You got it!")
