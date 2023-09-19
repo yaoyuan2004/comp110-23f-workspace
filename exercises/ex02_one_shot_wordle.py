@@ -1,9 +1,7 @@
-"""one shot wordle exercise"""
+"""one shot wordle exercise."""
 __author__ = "730713746"
 y: str = "python"
 x: str = input("What is your 6-letter guess?")
-while len(x) != 6:
-    x: str = input("That was not 6 letters! Try again:")
 if x != y:
     index: int = 0
     output: str = ("")
