@@ -2,6 +2,8 @@
 __author__ = "730713746"
 y: str = "python"
 x: str = input("What is your 6-letter guess?")
+while len(x) != 6:
+    x = input("That was not 6 letters! Try again:")
 if x != y:
     index: int = 0
     output: str = ("")
@@ -13,7 +15,7 @@ if x != y:
         else:
             output = output + f"\U00002B1C"
         index = index + 1
-    print(str(output))
+    print(f"{output}")
     print("Not quite. Play again soon!")
 else:
     print(f"\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9\U0001F7E9")
