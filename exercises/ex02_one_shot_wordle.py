@@ -13,7 +13,7 @@ if x != y:
     while index <= 5:
         if x[index] == y[index]:
             output = output + f"{green}"
-        elif x[index] in {"p", "y", "t", "h", "o", "n"}:
+        elif x[index] == y[0] or x[index] == y[1] or x[index]== y[2] or x[index] == y[3] or x[index] == y[4] or x[index] == y[5]:
             output = output + f"{yellow}"
         else:
             output = output + f"{white}"
