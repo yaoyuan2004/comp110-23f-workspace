@@ -3,7 +3,7 @@ __author__ = "730713746"
 
 
 def contains_char(word: str, character: str) -> bool:
-    """check what inside"""
+    """Check what inside, and report ture or fauls."""
     assert len(character) == 1
     x: int = 0
     while x < len(word):
@@ -14,7 +14,7 @@ def contains_char(word: str, character: str) -> bool:
 
 
 def emojified(x: str, y: str) -> str:
-    """ return a string of emoji whose color show the result"""
+    """Return a string of emoji whose color show the result."""
     white = "\U00002B1C"
     yellow = "\U0001F7E8"
     green = "\U0001F7E9"
@@ -36,6 +36,7 @@ def emojified(x: str, y: str) -> str:
     
 
 def input_guess(length: int) -> str:
+    """Collect the guess in a right form."""
     guess: str = input(f"Enter a {length} character word")
     while len(guess) != length:
         guess = input(f"That wasn't {length} chars! Try again:")
@@ -47,13 +48,13 @@ def main() -> None:
     secret: str = "codes"
     t = 1
     print(f"=== Turn {t}/6 ===")
-    guess = input_guess(len(secret))
-    print(emojified(guess, secret))
-    while t <= 6 and guess != secret:
+    gues = input_guess(len(secret))
+    print(emojified(gues, secret))
+    while t <= 6 and gues != secret:
         t = t + 1
         print(f"=== Turn {t}/6 ===")
-        guess = input_guess(len(secret))
-        print(emojified(guess, secret))
+        gues = input_guess(len(secret))
+        print(emojified(gues, secret))
     if t == 7:
         print("X/6 - Sorry, try again tomorrow!")
     print(f"You won in {t}/6 turns!")
