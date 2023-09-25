@@ -53,7 +53,9 @@ def main() -> None:
         t = t + 1
         print(f"=== Turn {t}/6 ===")
         guess = input_guess(len(secret))
-        print(emojified(guess, secret))    
+        print(emojified(guess, secret))
+    if t == 7:
+        print("X/6 - Sorry, try again tomorrow!")
     print(f"You won in {t}/6 turns!")
 
 
