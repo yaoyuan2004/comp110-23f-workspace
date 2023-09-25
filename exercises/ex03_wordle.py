@@ -1,13 +1,18 @@
-"""the complete program of wordle"""
+"""the complete program of wordle."""
 __author__ = "730713746"
+
+
 def contains_char(word: str, character: str) -> bool:
+    """check what inside"""
     assert len(character) == 1
-    x:str = 0
+    x: int = 0
     while x < len(word):
         if word[x] == character:
             return True
         x = x + 1
     return False
+
+
 def emojified(x: str, y: str) -> str:
     """ return a string of emoji whose color show the result"""
     white = "\U00002B1C"
@@ -28,23 +33,29 @@ def emojified(x: str, y: str) -> str:
         return f"{output}"
     else:
         return f"{green}{green}{green}{green}{green}{green}"
+    
+
 def input_guess(length: int) -> str:
     guess: str = input(f"Enter a {length} character word")
     while len(guess) != length:
-        guess: str = input(f"That wasn't {length} chars! Try again:")
+        guess = input(f"That wasn't {length} chars! Try again:")
     return guess
+
+
 def main() -> None:
     """The entrypoint of wordle and main game loop."""
     secret: str = "codes"
     t = 1
-    print (f"=== Turn {t}/6 ===")
+    print(f"=== Turn {t}/6 ===")
     guess = input_guess(len(secret))
-    print (emojified(guess, secret))
+    print(emojified(guess, secret))
     while t <= 6 and guess != secret:
         t = t + 1
-        print (f"=== Turn {t}/6 ===")
+        print(f"=== Turn {t}/6 ===")
         guess = input_guess(len(secret))
-        print (emojified(guess, secret))    
-    print (f"You won in {t}/6 turns!")
+        print(emojified(guess, secret))    
+    print(f"You won in {t}/6 turns!")
+
+
 if __name__ == "__main__":
     main()
