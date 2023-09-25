@@ -21,7 +21,7 @@ def emojified(x: str, y: str) -> str:
     assert len(x) == len(y)
     index: int = 0
     output: str = ("")
-    while index <= len(x)-1:
+    while index <= len(x) - 1:
         if x[index] == y[index]:
             output = output + f"{green}"
         elif contains_char(y, x[index]) is True:
@@ -59,6 +59,7 @@ def main() -> None:
         print("X/6 - Sorry, try again tomorrow!")
     if t != 1 and gues == secret:
         print(f"You won in {t}/6 turns!")
+        exit()
 
 
 if __name__ == "__main__":
