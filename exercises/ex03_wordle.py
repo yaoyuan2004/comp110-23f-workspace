@@ -58,8 +58,7 @@ def main() -> None:
     if t == 7:
         print("X/6 - Sorry, try again tomorrow!")
     if t != 1 and gues == secret:
-        print(f"You won in {t}/6 turns!")
-        exit()
+        print(f"You won in {t-1}/6 turns!")
 
 
 if __name__ == "__main__":
