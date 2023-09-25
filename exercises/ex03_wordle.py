@@ -24,8 +24,8 @@ def emojified(x: str, y: str) -> str:
         output: str = ("")
         while index <= len(y) - 1:
             if x[index] == y[index]:
-               output = output + f"{green}"
-            elif contains_char(y, x[index]) == True:
+                output = output + f"{green}"
+            elif contains_char(y, x[index]) is True:
                 output = output + f"{yellow}"
             else:
                 output = output + f"{white}"
@@ -50,14 +50,16 @@ def main() -> None:
     print(f"=== Turn {t}/6 ===")
     gues = input_guess(len(secret))
     print(emojified(gues, secret))
+    t = t + 1
     while t <= 6 and gues != secret:
-        t = t + 1
         print(f"=== Turn {t}/6 ===")
         gues = input_guess(len(secret))
         print(emojified(gues, secret))
+        t = t + 1
     if t == 7:
         print("X/6 - Sorry, try again tomorrow!")
-    print(f"You won in {t}/6 turns!")
+    elif gues == secret:
+        print(f"You won in {t}/6 turns!")
 
 
 if __name__ == "__main__":
