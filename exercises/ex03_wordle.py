@@ -19,20 +19,17 @@ def emojified(x: str, y: str) -> str:
     yellow = "\U0001F7E8"
     green = "\U0001F7E9"
     assert len(x) == len(y)
-    if x != y:
-        index: int = 0
-        output: str = ("")
-        while index <= len(y) - 1:
-            if x[index] == y[index]:
-                output = output + f"{green}"
-            elif contains_char(y, x[index]) is True:
-                output = output + f"{yellow}"
-            else:
-                output = output + f"{white}"
-            index = index + 1
-        return f"{output}"
-    else:
-        return f"{green}{green}{green}{green}{green}{green}"
+    index: int = 0
+    output: str = ("")
+    while index <= len(x)-1:
+        if x[index] == y[index]:
+            output = output + f"{green}"
+        elif contains_char(y, x[index]) is True:
+            output = output + f"{yellow}"
+        else:
+            output = output + f"{white}"
+        index = index + 1
+    return f"{output}"
     
 
 def input_guess(length: int) -> str:
@@ -53,7 +50,7 @@ def main() -> None:
     if gues == secret:
         print(f"You won in {t}/6 turns!")
     t = t + 1
-    while t <= 6 and gues != secret:
+    while gues != secret and t <= 6:
         print(f"=== Turn {t}/6 ===")
         gues = input_guess(len(secret))
         print(emojified(gues, secret))
