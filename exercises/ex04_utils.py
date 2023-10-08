@@ -29,9 +29,9 @@ def max(input: list[int]) -> int:
 
 def is_equal(list_x: list[int], list: list[int]) -> bool:
     """To check if 2 lists are equal."""
-    if len(list_x) == 0 or len(list) == 0:
-        return False
     if len(list_x) == 0 and len(list) == 0:
+        return True
+    if len(list_x) == 0 or len(list) == 0:
         return False
     index = 0
     if len(list_x) != len(list):
