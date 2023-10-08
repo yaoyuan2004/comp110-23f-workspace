@@ -33,4 +33,5 @@ def is_equal(x: list[int], y: list[int]) -> bool:
     while index < len(x):
         if x[index] != y[index]:
             return False
+        index += 1
     return True
