@@ -24,14 +24,14 @@ def max(input: list[int]) -> int:
     return largest
 
 
-def is_equal(x: list[int], y: list[int]) -> bool:
-    if len(x) == 0 or len(y) == 0:
+def is_equal(x: list[int], list: list[int]) -> bool:
+    if len(x) == 0 or len(list) == 0:
         return False
     index = 0
-    if len[x] != len(y):
+    if len(x) != len(list):
         return False
-    while index < len(x):
-        if x[index] != y[index]:
+    while index < len(x) and index < len(list):
+        if x[index] != list[index]:
             return False
         index += 1
     return True
