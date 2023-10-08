@@ -2,6 +2,8 @@
 __author__ = "730713746"
 
 def all(list: list, element: int) -> bool:
+    if len(list) == 0:
+        raise ValueError("all() arg is an empty List")
     index = 0
     while index < len(list):
         if list[index] != element:
@@ -23,6 +25,8 @@ def max(input: list[int]) -> int:
 
 
 def is_equal(x: list[int], y: list[int]) -> bool:
+    if len(x) == 0 or len(y) == 0:
+        raise ValueError("max() arg is an empty List")
     index = 0
     if len[x] != len(y):
         return False
