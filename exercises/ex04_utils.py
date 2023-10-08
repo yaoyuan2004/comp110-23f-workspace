@@ -1,7 +1,9 @@
-"""Ex04."""
+"""Ex04 detais are shown here."""
 __author__ = "730713746"
 
-def all(list: list, element: int) -> bool:
+
+def all(list: list[int], element: int) -> bool:
+    """Find if all is match."""
     if len(list) == 0:
         return False
     index = 0
@@ -13,6 +15,7 @@ def all(list: list, element: int) -> bool:
 
 
 def max(input: list[int]) -> int:
+    """To find the largest."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     index = 0
@@ -24,14 +27,17 @@ def max(input: list[int]) -> int:
     return largest
 
 
-def is_equal(x: list[int], list: list[int]) -> bool:
-    if len(x) == 0 or len(list) == 0:
+def is_equal(list_x: list[int], list: list[int]) -> bool:
+    """To check if 2 lists are equal."""
+    if len(list_x) == 0 or len(list) == 0:
+        return False
+    if len(list_x) == 0 and len(list) == 0:
         return False
     index = 0
-    if len(x) != len(list):
+    if len(list_x) != len(list):
         return False
-    while index < len(x) and index < len(list):
-        if x[index] != list[index]:
+    while index < len(list_x) and index < len(list):
+        if list_x[index] != list[index]:
             return False
         index += 1
     return True
