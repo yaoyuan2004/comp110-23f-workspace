@@ -14,7 +14,7 @@ def f_sum(x: list[float]) -> float:
     return outcome
 
 
-def f_ranage_sum(x: list[float]) -> float:
+def f_range_sum(x: list[float]) -> float:
     outcome = 0.0
     for i in (0,len(x),1):
         outcome += x[i]
