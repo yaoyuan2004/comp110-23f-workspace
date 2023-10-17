@@ -3,6 +3,7 @@ def w_sum(x: list[float]) -> float:
     outcome = 0.0
     while index < len(x):
         outcome += x[index]
+        index += 1
     return outcome
 
 
