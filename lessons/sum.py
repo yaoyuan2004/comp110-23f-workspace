@@ -1,6 +1,8 @@
-"""three way for sum."""
+"""Three way for sum."""
+
+
 def w_sum(x: list[float]) -> float:
-    """using the while loop."""
+    """Using the while loop."""
     index = 0
     outcome = 0.0
     while index < len(x):
@@ -10,7 +12,7 @@ def w_sum(x: list[float]) -> float:
 
 
 def f_sum(x: list[float]) -> float:
-    """using the for loop."""
+    """Using the for loop."""
     outcome = 0.0
     for i in x:
         outcome += i
@@ -18,7 +20,7 @@ def f_sum(x: list[float]) -> float:
 
 
 def f_range_sum(x: list[float]) -> float:
-    """using the for loop in range."""
+    """Using the for loop in range."""
     outcome = 0.0
     for i in range(0, len(x), 1):
         outcome += x[i]
