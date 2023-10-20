@@ -1,14 +1,12 @@
 """turtle_tutorial"""
 from turtle import Turtle, colormode, done
 leo: Turtle = Turtle()
+leo.penup()
 leo.goto(45, 60)
-leo.forward(300)
-leo.left(90)
-leo.forward(300)
-leo.left(90)
-leo.color("red")
-leo.forward(300)
-leo.left(90)
-leo.forward(300)
-leo.left(90)
+leo.pendown()
+i: int = 0
+while (i < 3):
+    leo.forward(300)
+    leo.left(120)
+    i = i + 1
 done()
