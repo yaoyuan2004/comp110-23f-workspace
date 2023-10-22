@@ -1,12 +1,12 @@
-"""To draw a graph. the special requirement is fullfilled at line 14,19,26,47,49,78,80"""
+"""To draw a graph. the special requirement is fullfilled at line 14,19,26,47,49,78,80."""
 __author__ = "730713462"
-from turtle import Turtle, colormode, done
+from turtle import Turtle, done
 
 
 def sun(t: Turtle, x: float, y: float) -> None:
     """To draw a sun."""
     t.penup()
-    t.goto(x,y)
+    t.goto(x, y)
     t.pendown()
     t.color("yellow")
     t.begin_fill()
@@ -16,9 +16,9 @@ def sun(t: Turtle, x: float, y: float) -> None:
 
 
 def peak(t: Turtle, x: float, y: float) -> None:
-    """To draw a peak, which break up a complex mountain"""
+    """To draw a peak, which break up a complex mountain."""
     t.penup()
-    t.goto(x,y)
+    t.goto(x, y)
     t.pendown()
     t.color("gray")
     t.begin_fill()
@@ -32,7 +32,7 @@ def peak(t: Turtle, x: float, y: float) -> None:
 def house(t: Turtle, x: float, y: float) -> None:
     """To draw a house."""
     t.penup()
-    t.goto(x,y)
+    t.goto(x, y)
     t.pendown()
     t.color("blue")
     t.begin_fill()
@@ -41,7 +41,7 @@ def house(t: Turtle, x: float, y: float) -> None:
         t.left(90)
     t.end_fill()
     t.penup()
-    t.goto(x-20,y+100)
+    t.goto(x - 20, y + 100)
     t.pendown()
     t.pencolor("brown")
     """Change the mark color."""
@@ -57,7 +57,7 @@ def house(t: Turtle, x: float, y: float) -> None:
 def flag(t: Turtle, x: float, y: float) -> None:
     """To draw a flag."""
     t.penup()
-    t.goto(x,y)
+    t.goto(x, y)
     t.pendown()
     t.color("black")
     t.left(90)
@@ -71,15 +71,16 @@ def flag(t: Turtle, x: float, y: float) -> None:
 
 
 def main() -> None:
+    """The main construction of the drawing."""
     t: Turtle = Turtle()
     t.speed(0)
-    sun(t,220,250)
-    for i in range(-2,2):
+    sun(t, 220, 250)
+    for i in range(-2, 2):
         """Draw something twice."""
-        peak(t,140*i,50)
+        peak(t, 140 * i, 50)
         """using the peak to compose a mountain"""
-    house(t,-200,-120)
-    flag(t,-50,-130)
+    house(t, -200, -120)
+    flag(t, -50, -130)
     done()
 
 
