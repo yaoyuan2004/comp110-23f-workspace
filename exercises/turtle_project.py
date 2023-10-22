@@ -11,7 +11,7 @@ def sun(t: Turtle, x: float, y: float) -> None:
     t.pendown()
     t.color("yellow")
     t.begin_fill()
-    t.circle(random.randint(40,60))
+    t.circle(random.randint(40, 60))
     """Usage of the random function."""
     """Circle is some key word beyon the introduction."""
     t.end_fill()
