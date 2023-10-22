@@ -1,6 +1,7 @@
-"""To draw a graph. the special requirement is fullfilled at line 14,19,26,47,49,78,80."""
+"""To draw a graph. the special requirement is fullfilled at line 15,16,21,28,49,51,80,882."""
 __author__ = "730713462"
 from turtle import Turtle, done
+import random
 
 
 def sun(t: Turtle, x: float, y: float) -> None:
@@ -10,7 +11,8 @@ def sun(t: Turtle, x: float, y: float) -> None:
     t.pendown()
     t.color("yellow")
     t.begin_fill()
-    t.circle(50)
+    t.circle(random.randint(40,60))
+    """usage of the random function"""
     """Circle is some key word beyon the introduction."""
     t.end_fill()
 
