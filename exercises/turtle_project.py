@@ -1,5 +1,5 @@
 """To draw a graph. the special requirement is fullfilled at line 15,16,21,28,49,51,80,882."""
-__author__ = "730713462"
+__author__ = "730713746"
 from turtle import Turtle, done
 import random
 
