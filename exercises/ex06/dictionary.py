@@ -12,7 +12,7 @@ def invert(x: dict[str, str]) -> dict[str, str]:
     return y
 
 
-def favorite_colors(x: dict[str, str]) -> str:
+def favorite_color(x: dict[str, str]) -> str:
     """It would find highest frequency."""
     bank: dict[str, int] = {}
     for i in x:
@@ -29,7 +29,7 @@ def favorite_colors(x: dict[str, str]) -> str:
     return outcome
 
 
-def count(x: list[str]) -> dict[str: int]:
+def count(x: list[str]) -> dict[str, int]:
     """It would count all frequency."""
     num: dict[str, int] = {}
     for i in x:
