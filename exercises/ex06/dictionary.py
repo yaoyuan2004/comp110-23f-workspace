@@ -30,7 +30,6 @@ def favorite_color(x: dict[str, str]) -> str:
 
 
 def count(x: list[str]) -> dict[str, int]:
-    """This doc string is used for check if auto grader works well"""
     """It would count all frequency."""
     num: dict[str, int] = {}
     for i in x:
