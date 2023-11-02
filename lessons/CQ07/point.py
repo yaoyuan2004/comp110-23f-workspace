@@ -14,10 +14,15 @@ class Point:
 
 
     def scale_by(self, factor: int):
-        x = x * factor
-        y = y * factor
+        self.x = self.x * factor
+        self.y = self.y * factor
 
     
     def scale(self, factor: int) -> Point:
         x = self.x * factor 
         y = self.y * factor
+        a: Point = (x, y)
+        return a
+
+
+
