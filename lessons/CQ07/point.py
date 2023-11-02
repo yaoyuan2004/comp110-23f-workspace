@@ -25,6 +25,3 @@ class Point:
         y = self.y * factor
         a: Point = Point(x, y)
         return a
-
-
-
