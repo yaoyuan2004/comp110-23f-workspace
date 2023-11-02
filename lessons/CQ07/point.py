@@ -7,20 +7,18 @@ class Point:
     """Creat the class points."""
     x: float
     y: float
-    
 
     def __init__(self, x_init: float, y_init: float):
         """Construction of the init."""
         self.x = x_init
         self.y = y_init
 
-
-    def scale_by(self, factor: int):
+    def scale_by(self, factor: int) -> Point:
         """Construction of the scale_by."""
         self.x = self.x * factor
         self.y = self.y * factor
+        return self
 
-    
     def scale(self, factor: int) -> Point:
         """Construction of the scale."""
         x = self.x * factor 
