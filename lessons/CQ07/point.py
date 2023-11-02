@@ -3,7 +3,7 @@ from __future__ import annotations
 __author__ = "730713746"
 
 
-class point:
+class Point:
     """Creat the class points."""
     x: float
     y: float
@@ -18,6 +18,6 @@ class point:
         y = y * factor
 
     
-    def scale(self, factor: int) -> point:
+    def scale(self, factor: int) -> Point:
         x = self.x * factor 
         y = self.y * factor
