@@ -3,6 +3,7 @@ __author__ = "730713746"
 from exercises.ex06.dictionary import invert, favorite_color, count, alphabetizer, update_attendance
 import pytest
 
+
 def test_invert_a() -> None:
     """It would test with an empty list."""
     x: dict[str, str] = {}
@@ -48,7 +49,7 @@ def test_count_a() -> None:
 
 def test_count_b() -> None:
     """This should return value of 1 for each str for a nonreplicate list."""
-    x: list[str] = ["apple","banana","strawberry"]
+    x: list[str] = ["apple", "banana", "strawberry"]
     assert count(x) == {"apple": 1, "banana": 1, "strawberry": 1}
 
 
@@ -74,6 +75,7 @@ def test_alphabetizer_c() -> None:
     """This should return an empty dict for an empty input."""
     x: list[str] = ["python", "sugar", "turtle", "party", "table"]
     assert alphabetizer(x) == {'p': ['python', 'party'], 's': ['sugar'], 't': ['turtle', 'table']}
+
 
 def test_update_attendance_a() -> None:
     """This should return an empty dict for an empty input."""
