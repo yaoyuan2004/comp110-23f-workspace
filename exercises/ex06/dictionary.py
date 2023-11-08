@@ -55,10 +55,10 @@ def update_attendance(x: dict[str, list[str]], y: str, z: str) -> dict[str, list
     """Update the new dictionary."""
     if len(y) == 0 or len(z) == 0:
         return x
-    if z in x[y]:
-        return x
     if (y in x) is False:
         x[y] = [z]
+    elif z in x[y]:
+        return x
     else:
         x[y].append(z)
     return x
