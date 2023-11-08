@@ -44,16 +44,16 @@ def alphabetizer(x: list[str]) -> dict[str, list[str]]:
     """It woule like to count all frequency with capital."""
     num: dict[str, list[str]] = {}
     for i in x:
-        if (i.lower()[0] in num) is False:
-            num[i[0]] = [i]
+        if (i[0].lower() in num) is False:
+            num[i[0].lower()] = [i]
         else:
-            num[i[0]].append(i)
+            num[i[0].lower()].append(i)
     return num
 
 
 def update_attendance(x: dict[str, list[str]], y: str, z: str) -> dict[str, list[str]]:
     """Update the new dictionary."""
-    if len(y) == 0 or len(z) == 0:
+    if len(y) == 0 or len(z) == 0 or z in x[y]:
         return x
     if (y in x) is False:
         x[y] = [z]
