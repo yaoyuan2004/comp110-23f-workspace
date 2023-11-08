@@ -8,7 +8,7 @@ def invert(x: dict[str, str]) -> dict[str, str]:
     for i in x:
         y[x[i]] = i
     if len(y) != len(x):
-        return exit("KeyError")
+        raise KeyError
     return y
 
 
@@ -44,7 +44,7 @@ def alphabetizer(x: list[str]) -> dict[str, list[str]]:
     """It woule like to count all frequency with capital."""
     num: dict[str, list[str]] = {}
     for i in x:
-        if (i[0] in num) is False:
+        if (i.lower()[0] in num) is False:
             num[i[0]] = [i]
         else:
             num[i[0]].append(i)
@@ -53,6 +53,8 @@ def alphabetizer(x: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(x: dict[str, list[str]], y: str, z: str) -> dict[str, list[str]]:
     """Update the new dictionary."""
+    if len(y) == 0 or len(z) == 0:
+        return x
     if (y in x) is False:
         x[y] = [z]
     else:
