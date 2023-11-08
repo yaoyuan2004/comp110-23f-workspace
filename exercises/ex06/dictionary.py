@@ -53,7 +53,9 @@ def alphabetizer(x: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(x: dict[str, list[str]], y: str, z: str) -> dict[str, list[str]]:
     """Update the new dictionary."""
-    if len(y) == 0 or len(z) == 0 or z in x[y]:
+    if len(y) == 0 or len(z) == 0:
+        return x
+    if z in x[y]:
         return x
     if (y in x) is False:
         x[y] = [z]
