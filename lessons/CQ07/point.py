@@ -27,13 +27,16 @@ class Point:
         return a
     
     def __str__(self) -> str:
-        my_str = f"x: {self.x}, y: {self.y}"
+        """Defind the new str methods."""
+        my_str = f"x: {self.x}; y: {self.y}"
         return my_str
     
     def __mul__(self, factor: int | float) -> Point:
+        """Defind the new mul methods."""
         new_point: Point = Point(self.x * factor, self.y * factor)
         return new_point
     
     def __add__(self, factor: int | float) -> Point:
+        """Defind the new add methods."""
         new_point: Point = Point(self.x + factor, self.y + factor)
         return new_point
