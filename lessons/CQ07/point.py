@@ -8,7 +8,7 @@ class Point:
     x: float
     y: float
 
-    def __init__(self, x_init: float, y_init: float):
+    def __init__(self, x_init: float = 0, y_init: float = 0):
         """Construction of the init."""
         self.x = x_init
         self.y = y_init
@@ -25,3 +25,15 @@ class Point:
         y = self.y * factor
         a: Point = Point(x, y)
         return a
+    
+    def __str__(self) -> str:
+        my_str = f"x: {self.x}, y: {self.y}"
+        return my_str
+    
+    def __mul__(self, factor: int | float) -> Point:
+        new_point: Point = Point(self.x * factor, self.y * factor)
+        return new_point
+    
+    def __add__(self, factor: int | float) -> Point:
+        new_point: Point = Point(self.x + factor, self.y + factor)
+        return new_point
